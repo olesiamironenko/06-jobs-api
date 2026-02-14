@@ -68,8 +68,8 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateJobRequest'
             example:
-              company: google
-              position: front-end developer
+              companyName: google
+              positionName: front-end developer
         required: true
       responses:
         '200':
@@ -120,8 +120,8 @@ paths:
             schema:
               $ref: '#/components/schemas/UpdateJobRequest'
             example:
-              company: random
-              position: intern
+              companyName: random
+              positionName: intern
         required: true
       responses:
         '200':
@@ -176,31 +176,31 @@ components:
     CreateJobRequest:
       title: CreateJobRequest
       required:
-        - company
-        - position
+        - companyName
+        - positionName
       type: object
       properties:
-        company:
+        companyName:
           type: string
-        position:
+        positionName:
           type: string
       example:
-        company: google
-        position: front-end developer
+        companyName: google
+        positionName: front-end developer
     UpdateJobRequest:
       title: UpdateJobRequest
       required:
-        - company
-        - position
+        - companyName
+        - positionName
       type: object
       properties:
-        company:
+        companyName:
           type: string
-        position:
+        positionName:
           type: string
       example:
-        company: random
-        position: intern
+        companyName: random
+        positionName: intern
   securitySchemes:
     httpBearer:
       type: http
